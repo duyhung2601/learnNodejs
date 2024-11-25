@@ -20,15 +20,9 @@ app.use('/', webRouters);
 
 
 //test connection
+connection();
 
 
-// A simple SELECT query
-connection.query(
-    'SELECT * FROM Users u ;',
-    function (err, results, fields) {
-        // console.log("result=", results); // results contains rows returned by server
-    }
-);
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
